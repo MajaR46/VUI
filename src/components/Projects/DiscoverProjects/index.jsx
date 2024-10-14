@@ -27,7 +27,7 @@ const ProjectCard = ({
     const token = sessionStorage.getItem("token");
 
     try {
-      const response = await fetch(`http://localhost:3001/api/user/my-user`, {
+      const response = await fetch(`https://vuibackend-4-0.onrender.com/api/user/my-user`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
@@ -66,7 +66,7 @@ const ProjectCard = ({
   const fetchComments = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3001/api/review/project/${id}`,
+        `https://vuibackend-4-0.onrender.com/api/review/project/${id}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -100,7 +100,7 @@ const ProjectCard = ({
     };
 
     try {
-      const response = await fetch("http://localhost:3001/api/review", {
+      const response = await fetch("https://vuibackend-4-0.onrender.com/api/review", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -128,7 +128,7 @@ const ProjectCard = ({
     try {
       const token = sessionStorage.getItem("token");
       const response = await fetch(
-        `http://localhost:3001/api/review/${commentId}`,
+        `https://vuibackend-4-0.onrender.com/api/review/${commentId}`,
         {
           method: "DELETE",
           headers: {
@@ -162,7 +162,7 @@ const ProjectCard = ({
     try {
       const token = sessionStorage.getItem("token");
       const response = await fetch(
-        `http://localhost:3001/api/review/${editCommentId}`,
+        `https://vuibackend-4-0.onrender.com/api/review/${editCommentId}`,
         {
           method: "PUT",
           headers: {
@@ -296,10 +296,10 @@ const Projects = () => {
 
 
   const fetchProjects = async () => {
-    let url = "http://localhost:3001/api/project";
+    let url = "https://vuibackend-4-0.onrender.com/api/project";
 
     if (selectedStatus.length && !selectedStatus.includes("All")) {
-      url = `http://localhost:3001/api/project/status/${selectedStatus.join(
+      url = `https://vuibackend-4-0.onrender.com/api/project/status/${selectedStatus.join(
         ","
       )}`;
     }
@@ -336,7 +336,7 @@ const Projects = () => {
     }
 
     try {
-      const url = `http://localhost:3001/api/project/title/${searchTerm}`;
+      const url = `https://vuibackend-4-0.onrender.com/api/project/title/${searchTerm}`;
       const response = await fetch(url);
       const data = await response.json();
 

@@ -71,7 +71,7 @@ const Profile = () => {
     const fetchMyUser = async () => {
       const token = sessionStorage.getItem("token");
       try {
-        const response = await fetch(`http://localhost:3001/api/user/my-user`, {
+        const response = await fetch(`https://vuibackend-4-0.onrender.com/api/user/my-user`, {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
@@ -93,7 +93,7 @@ const Profile = () => {
   const handleUpdateUser = async (formData) => {
     const token = sessionStorage.getItem("token");
     try {
-      const response = await fetch(`http://localhost:3001/api/user`, {
+      const response = await fetch(`https://vuibackend-4-0.onrender.com/api/user`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -115,7 +115,7 @@ const Profile = () => {
   const handleDeleteUser = async () => {
     const token = sessionStorage.getItem("token");
     try {
-      const response = await fetch(`http://localhost:3001/api/user`, {
+      const response = await fetch(`https://vuibackend-4-0.onrender.com/api/user`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

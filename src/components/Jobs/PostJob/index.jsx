@@ -57,7 +57,7 @@ const PostJob = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:3001/api/job", {
+      const response = await fetch("https://vuibackend-4-0.onrender.com/api/job", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

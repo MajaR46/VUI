@@ -16,7 +16,7 @@ const EditProject = () => {
     const token = sessionStorage.getItem("token");
 
     try {
-      const response = await fetch(`http://localhost:3001/api/project/${id}`, {
+      const response = await fetch(`https://vuibackend-4-0.onrender.com/api/project/${id}`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
@@ -48,7 +48,7 @@ const EditProject = () => {
     const token = sessionStorage.getItem("token");
 
     try {
-      const response = await fetch(`http://localhost:3001/api/project/${id}`, {
+      const response = await fetch(`https://vuibackend-4-0.onrender.com/api/project/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

@@ -75,7 +75,7 @@ const MyProjects = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3001/api/project/user/project`,
+        `https://vuibackend-4-0.onrender.com/api/project/user/project`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -102,7 +102,7 @@ const MyProjects = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3001/api/project/${projectId}`,
+        `https://vuibackend-4-0.onrender.com/api/project/${projectId}`,
         {
           method: "PUT",
           headers: {
@@ -140,7 +140,7 @@ const MyProjects = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3001/api/project/${projectToDelete}`,
+        `https://vuibackend-4-0.onrender.com/api/project/${projectToDelete}`,
         {
           method: "DELETE",
           headers: {

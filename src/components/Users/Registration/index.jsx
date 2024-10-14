@@ -31,7 +31,7 @@ const Register = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:3001/api/user", {
+      const response = await fetch("https://vuibackend-4-0.onrender.com/api/user", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -46,7 +46,7 @@ const AddProject = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:3001/api/project", {
+      const response = await fetch("https://vuibackend-4-0.onrender.com/api/project", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

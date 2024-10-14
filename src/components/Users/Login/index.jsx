@@ -23,7 +23,7 @@ const Login = () => {
     }
 
     try {
-      const response = await fetch("https://vui-indol.vercel.app/login", {
+      const response = await fetch("https://vui-indol.vercel.app/api/user/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

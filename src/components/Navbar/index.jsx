@@ -10,7 +10,7 @@ const Navbar = () => {
     const token = sessionStorage.getItem("token");
 
     try {
-      const response = await fetch(`https://vuibackend-4-0.onrender.com/api/user/my-user`, {
+      const response = await fetch(`https://vuibackend-6-0.onrender.com/api/user/my-user`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,

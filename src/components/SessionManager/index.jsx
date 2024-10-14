@@ -33,7 +33,7 @@ const SessionManager = ({ children }) => {
     try {
       if (refreshToken) {
         const response = await fetch(
-          "https://vuibackend-4-0.onrender.com/api/user/token/refreshtoken",
+          "https://vuibackend-6-0.onrender.com/api/user/token/refreshtoken",
           {
             method: "POST",
             headers: {

@@ -77,7 +77,7 @@ const Jobs = () => {
 
   const fetchRoles = async () => {
     try {
-      const response = await axios.get("https://vuibackend-4-0.onrender.com/api/job/roles");
+      const response = await axios.get("https://vuibackend-6-0.onrender.com/api/job/roles");
       setRoles(response.data);
     } catch (error) {
       console.error("There was an error fetching roles!", error);
@@ -88,7 +88,7 @@ const Jobs = () => {
     const token = sessionStorage.getItem("token");
 
     try {
-      const response = await fetch(`https://vuibackend-4-0.onrender.com/api/user/my-user`, {
+      const response = await fetch(`https://vuibackend-6-0.onrender.com/api/user/my-user`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
@@ -111,7 +111,7 @@ const Jobs = () => {
   const handleJobFilter = async (role) => {
     try {
       const response = await axios.get(
-        `https://vuibackend-4-0.onrender.com/api/job/role/${role}`
+        `https://vuibackend-6-0.onrender.com/api/job/role/${role}`
       );
       setFilteredJobs(response.data);
     } catch (error) {
@@ -165,7 +165,7 @@ const Jobs = () => {
     try {
       const results = await Promise.all(
         filters.map((filter) =>
-          axios.get(`https://vuibackend-4-0.onrender.com/api/job/experience/${filter}`)
+          axios.get(`https://vuibackend-6-0.onrender.com/api/job/experience/${filter}`)
         )
       );
       const filteredJobs = results.flatMap((result) => result.data);

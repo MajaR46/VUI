@@ -77,7 +77,7 @@ const MyJobs = () => {
 
     try {
       const response = await fetch(
-        `https://vuibackend-4-0.onrender.com/api/job/user/my-jobs`,
+        `https://vuibackend-6-0.onrender.com/api/job/user/my-jobs`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -103,7 +103,7 @@ const MyJobs = () => {
     const token = sessionStorage.getItem("token");
 
     try {
-      const response = await fetch(`https://vuibackend-4-0.onrender.com/api/job/${jobId}`, {
+      const response = await fetch(`https://vuibackend-6-0.onrender.com/api/job/${jobId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -137,7 +137,7 @@ const MyJobs = () => {
 
     try {
       const response = await fetch(
-        `https://vuibackend-4-0.onrender.com/api/job/${jobToDelete}`,
+        `https://vuibackend-6-0.onrender.com/api/job/${jobToDelete}`,
         {
           method: "DELETE",
           headers: {

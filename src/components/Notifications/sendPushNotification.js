@@ -3,7 +3,7 @@ const sendPushNotification = async (message, recipient) => {
     const registration = await navigator.serviceWorker.ready;
     const subscription = await registration.pushManager.getSubscription();
 
-    const response = await fetch("https://vuibackend-4-0.onrender.com/send-notification", {
+    const response = await fetch("https://vuibackend-6-0.onrender.com/send-notification", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

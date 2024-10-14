@@ -67,7 +67,7 @@ const Jobs = () => {
   }, []);
   const fetchJobs = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/api/job");
+      const response = await axios.get("https://vui-indol.vercel.app/api/job");
       setJobs(response.data);
       setFilteredJobs(response.data);
     } catch (error) {

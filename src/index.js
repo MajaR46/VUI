@@ -64,7 +64,7 @@ function urlB64ToUint8Array(base64String) {
 
 function sendSubscriptionToServer(subscription) {
   console.log("Sending subscription to server:", subscription);
-  fetch("http://localhost:3001/register-subscription", {
+  fetch("https://vui-indol.vercel.app/register-subscription", {
     method: "POST",
     body: JSON.stringify(subscription),
     headers: {

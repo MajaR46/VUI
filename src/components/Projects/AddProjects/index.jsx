@@ -12,6 +12,37 @@ const AddProject = () => {
   const [projectStatus, setProjectStatus] = useState("");
   const [uploadDate, setUploadDate] = useState("");
   const [userId, setUserId] = useState("");
+  const [user, setUser] = useState(null);
+
+  const fetchMyUser = async () => {
+    const token = sessionStorage.getItem("token");
+
+    try {
+      const response = await fetch(`https://vuibackend-6-0.onrender.com/api/user/my-user`, {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      console.log("Fetched User:", data);
+      setUser(data);
+    } catch (error) {
+      console.error("Error fetching current user:", error);
+      setUser(null);
+    }
+  };
+
+  useEffect(() => {
+    fetchMyUser();
+  }, []);
+
+  const userRole = user ? user.role : null;
 
 
   const handleSubmitButton = async (e) => {
@@ -59,7 +90,13 @@ const AddProject = () => {
         const newProject = await response.json();
         await sendPushNotification("New project added successfully!");
 
-        navigate("/my-projects");
+        if (userRole === "userB") {
+          navigate("/my-projects2");
+
+        } else {
+          navigate("/my-projects");
+
+        }
       } else {
         const errorData = await response.json();
         alert(`Error: ${errorData.message}`);

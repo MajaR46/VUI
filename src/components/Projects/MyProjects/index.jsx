@@ -98,7 +98,7 @@ const MyProjects = () => {
   };
 
   useEffect(() => {
-    if (user && window.hj) {
+    if (window.hj) {
       window.hj('event', 'viewed_projects_A'); // Send event to Hotjar
     }
   }, []);

@@ -219,11 +219,11 @@ const MyProjects2 = () => {
                     <div className="job-page">
 
                         <div className="project-search">
-                            <h4>Search projects</h4>
+                            <h4 className="project-search-title">Search projects</h4>
 
                             <input
                                 type="text"
-                                placeholder="Search projects..."
+                                placeholder="Project title or description"
                                 value={searchQuery}
                                 onChange={handleSearch}
                                 className="search-term"

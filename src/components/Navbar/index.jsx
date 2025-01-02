@@ -101,14 +101,17 @@ const Navbar = () => {
           <li className="profile-dropdown">
             <Link to="/profile">Profile</Link>
             <div className="dropdown-content">
-              <Link to="/profile">My Profile</Link>
               {userRole === "userB" && (
                 <>
+                  <Link to="/profile2">My Profile</Link>
+
                   <Link to="/add-projects">Post a Project</Link>
                 </>
               )}
               {userRole === "user" && (
                 <>
+                  <Link to="/profile">My Profile</Link>
+
                   <Link to="/my-projects">My Projects</Link>
                   <Link to="/add-projects">Post a Project</Link>
                 </>

@@ -218,7 +218,9 @@ const MyProjects2 = () => {
                 <div className="job-section">
                     <div className="job-page">
 
-                        <div className="job-search">
+                        <div className="project-search">
+                            <h4>Search projects</h4>
+
                             <input
                                 type="text"
                                 placeholder="Search projects..."

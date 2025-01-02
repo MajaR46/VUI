@@ -103,7 +103,7 @@ const MyProjects2 = () => {
 
     useEffect(() => {
         if (window.hj) {
-            hj('event', 'viewed_projects_B'); // Send event to Hotjar
+            window.hj('event', 'viewed_projects_B'); // Send event to Hotjar
             console.log("HJ event triggered")
 
         }

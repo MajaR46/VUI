@@ -94,9 +94,9 @@ const Navbar = () => {
             <Link to="/profile">Profile</Link>
             <div className="dropdown-content">
               <Link to="/profile">My Profile</Link>
-              {userEmail === "usertest@gmail.com" && (
+              {userRole === "userB" && (
                 <>
-                  <Link to="/my-projects">My Projects</Link>
+                  <Link to="/my-projects2">My Projects</Link>
                   <Link to="/add-projects">Post a Project</Link>
                 </>
               )}

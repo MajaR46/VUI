@@ -100,6 +100,7 @@ const MyProjects = () => {
   useEffect(() => {
     if (window.hj) {
       window.hj('event', 'viewed_projects_A'); // Send event to Hotjar
+      console.log("HJ event triggered")
     }
   }, []);
   // Trigger when 'user' state changes

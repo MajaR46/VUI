@@ -34,6 +34,7 @@ const Login = () => {
 
       if (response.ok) {
         const data = await response.json();
+        console.log("API Response:", data); // Add this line to inspect the response
         sessionStorage.setItem("token", data.token);
         sessionStorage.setItem("refreshToken", data.refreshToken);
         sessionStorage.setItem("expiresAt", data.expiresAt);

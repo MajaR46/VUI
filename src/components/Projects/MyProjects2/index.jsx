@@ -15,6 +15,8 @@ const MyProjects2 = () => {
     const [showDeleteModal, setShowDeleteModal] = useState(false);
     const [projectToDelete, setProjectToDelete] = useState(null);
     const [searchQuery, setSearchQuery] = useState("");
+    const [projects, setProjects] = useState([]);
+
     ////////////////////////KEYBOARD SHORTCUTS ////////////////
     useEffect(() => {
         const handleKeyDown = (event) => {

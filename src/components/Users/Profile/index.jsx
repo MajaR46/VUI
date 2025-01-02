@@ -141,6 +141,10 @@ const Profile = () => {
     window.location.href = "/my-projects2"
   }
 
+  const handleNavigationToSavedJobs = () => {
+    window.location.href = "/saved-job"
+  }
+
   const confirmDelete = () => setShowDeleteModal(true);
   const cancelDelete = () => setShowDeleteModal(false);
   const proceedDelete = () => {
@@ -188,6 +192,8 @@ const Profile = () => {
                   {userRole === "userB" && (
                     <div>
                       <PrimaryButton text="My Projects" onClick={handleNavigationToMyProjects} />
+                      <PrimaryButton text="Saved Jobs" onClick={handleNavigationToSavedJobs} />
+
                     </div>
                   )}
 

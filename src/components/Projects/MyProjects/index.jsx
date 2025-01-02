@@ -97,6 +97,10 @@ const MyProjects = () => {
     }
   };
 
+  useEffect(() => {
+    hj('event', 'viewed_projects_a');
+  }, []);
+
   const handleUpdateProject = async (projectId, formData) => {
     const token = sessionStorage.getItem("token");
 

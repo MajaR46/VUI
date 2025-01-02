@@ -80,7 +80,7 @@ const Profile = () => {
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
         const data = await response.json();
         console.log("Fetched User:", data);
-        setUser(data);
+        setUser(data); // Set user state
       } catch (error) {
         console.error("Error fetching current user:", error);
         setUser(null);
@@ -88,6 +88,16 @@ const Profile = () => {
     };
     fetchMyUser();
   }, []);
+
+  useEffect(() => {
+    if (user) {
+      if (user.role === "user") {
+        hj('event', 'viewed_profile_A');
+      } else if (user.role === "userB") {
+        hj('event', 'viewed_profile_B');
+      }
+    }
+  }, [user]); // Trigger when 'user' state changes
 
 
   const handleUpdateUser = async (formData) => {

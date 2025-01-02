@@ -212,17 +212,21 @@ const MyProjects2 = () => {
                 <div className="job-background">
                     <div className="title">
                         <h2>My Projects</h2>
-                        <input
-                            type="text"
-                            placeholder="Search projects..."
-                            value={searchQuery}
-                            onChange={handleSearch}
-                            className="search-bar"
-                        />
+
                     </div>
                 </div>
                 <div className="job-section">
                     <div className="job-page">
+
+                        <div className="job-search">
+                            <input
+                                type="text"
+                                placeholder="Search projects..."
+                                value={searchQuery}
+                                onChange={handleSearch}
+                                className="search-term"
+                            />
+                        </div>
                         {filteredProjects.map((project) => {
                             const {
                                 _id: id,

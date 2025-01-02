@@ -104,7 +104,6 @@ const Navbar = () => {
               <Link to="/profile">My Profile</Link>
               {userRole === "userB" && (
                 <>
-                  <Link to="/my-projects2">My Projects</Link>
                   <Link to="/add-projects">Post a Project</Link>
                 </>
               )}

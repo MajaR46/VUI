@@ -93,7 +93,7 @@ const Profile = () => {
     if (user && window.hj) {
       window.hj('event', 'viewed_profile_A'); // Send event to Hotjar
     }
-  }, [user]);
+  }, [data]);
   // Trigger when 'user' state changes
 
 

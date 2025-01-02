@@ -92,12 +92,15 @@ const MyProjects2 = () => {
 
             const data = await response.json();
             console.log("Fetched Projects:", data);
-            setFilteredProjects(data);
+            setProjects(data); // Update projects
+            setFilteredProjects(data); // Update filteredProjects for the initial display
         } catch (error) {
             console.error("Error fetching my projects:", error);
+            setProjects([]); // Ensure the state is cleared on error
             setFilteredProjects([]);
         }
     };
+
 
     const handleUpdateProject = async (projectId, formData) => {
         const token = sessionStorage.getItem("token");

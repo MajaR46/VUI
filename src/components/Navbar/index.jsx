@@ -35,6 +35,7 @@ const Navbar = () => {
   }, []);
 
   const userRole = user ? user.role : null;
+  const userEmail = user ? user.email : null;
 
   const { speak } = useSpeech({
     "go to home": () => document.getElementById("home-link").click(),
@@ -105,6 +106,12 @@ const Navbar = () => {
                   <Link to="/post-job">Post a Job</Link>
                 </>
               )}
+              {userEmail === "usertest@gmail.com" && (
+                <>
+                  <Link to="/my-projects2">My Projects</Link>
+                </>
+              )}
+
             </div>
           </li>
         )}

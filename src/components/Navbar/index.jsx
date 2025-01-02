@@ -108,7 +108,7 @@ const Navbar = () => {
               )}
               {userEmail === "usertest@gmail.com" && (
                 <>
-                  <Link to="/my-projects2">My Projects</Link>
+                  <Link to="/my-projects2">My Projects2</Link>
                 </>
               )}
 

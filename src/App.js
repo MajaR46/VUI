@@ -16,6 +16,7 @@ import MyProjects from "./components/Projects/MyProjects";
 import SessionManager from "./components/SessionManager";
 import MyJobs from "./components/Jobs/MyJobs";
 import EditProject from "./components/Projects/EditProject";
+import MyProjects2 from "./components/Projects/MyProjects2";
 
 function App() {
   
@@ -37,6 +38,7 @@ function App() {
               <Route path="/registration" element={<Register />} />
               <Route path="/login" element={<Login />} />
               <Route path="/my-projects" element={<MyProjects />} />
+              <Route path="/my-projects2" element={<MyProjects2/>}/>
               <Route path="/my-jobs" element={<MyJobs />} />
               <Route path="/send-inquiry" element={<SendInquiry />} />
               <Route path="/edit-project/:id" element={<EditProject />} />

@@ -137,6 +137,10 @@ const Profile = () => {
     window.location.href = "/login";
   };
 
+  const handleNavigationToMyProjects = () => {
+    window.location.href = "/my-projects2"
+  }
+
   const confirmDelete = () => setShowDeleteModal(true);
   const cancelDelete = () => setShowDeleteModal(false);
   const proceedDelete = () => {
@@ -145,6 +149,8 @@ const Profile = () => {
   };
 
   if (!user) return null;
+  const userRole = user ? user.role : null;
+
 
   return (
     <>
@@ -179,6 +185,13 @@ const Profile = () => {
                 </>
               ) : (
                 <>
+                  {userRole === "userB" && (
+                    <div>
+                      <PrimaryButton text="My Projects" onClick={handleNavigationToMyProjects} />
+                    </div>
+                  )}
+
+
                   <div className="user-title">
                     <h2>BASIC INFORMATION</h2>
                   </div>

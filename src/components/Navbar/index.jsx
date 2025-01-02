@@ -87,6 +87,14 @@ const Navbar = () => {
             </li>
           </>
         )}
+        {userRole === "userB" && (
+          <>
+            <li>
+              <Link to="/my-projects2">My projects</Link>
+            </li>
+
+          </>
+        )}
 
         {/* Menu items only for logged-in users */}
         {user && (
@@ -97,6 +105,12 @@ const Navbar = () => {
               {userRole === "userB" && (
                 <>
                   <Link to="/my-projects2">My Projects</Link>
+                  <Link to="/add-projects">Post a Project</Link>
+                </>
+              )}
+              {userRole === "user" && (
+                <>
+                  <Link to="/my-projects">My Projects</Link>
                   <Link to="/add-projects">Post a Project</Link>
                 </>
               )}

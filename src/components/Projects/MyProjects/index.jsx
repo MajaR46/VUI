@@ -98,8 +98,11 @@ const MyProjects = () => {
   };
 
   useEffect(() => {
-    hj('event', 'viewed_projects_a');
+    if (user && window.hj) {
+      window.hj('event', 'viewed_projects_A'); // Send event to Hotjar
+    }
   }, []);
+  // Trigger when 'user' state changes
 
   const handleUpdateProject = async (projectId, formData) => {
     const token = sessionStorage.getItem("token");

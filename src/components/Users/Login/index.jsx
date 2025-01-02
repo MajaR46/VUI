@@ -37,7 +37,15 @@ const Login = () => {
         sessionStorage.setItem("token", data.token);
         sessionStorage.setItem("refreshToken", data.refreshToken);
         sessionStorage.setItem("expiresAt", data.expiresAt);
-        navigate("/Profile");
+
+        // Navigate based on userRole
+        if (data.userRole === "user") {
+          navigate("/profile");
+        } else if (data.userRole === "userB") {
+          navigate("/profile2");
+        } else {
+          alert("Invalid user role");
+        }
       } else {
         const data = await response.json();
         alert(`Login failed: ${data.message}`);
@@ -91,8 +99,7 @@ const Login = () => {
             <p>Don't have an account?</p>
             <button className="profile-button" onClick={handleRegister}>
               Register
-            </button>{" "}
-            { }
+            </button>
           </div>
         </form>
       </div>

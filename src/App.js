@@ -17,6 +17,7 @@ import SessionManager from "./components/SessionManager";
 import MyJobs from "./components/Jobs/MyJobs";
 import EditProject from "./components/Projects/EditProject";
 import MyProjects2 from "./components/Projects/MyProjects2";
+import Profile2 from "./components/Users/Profile2";
 
 function App() {
   
@@ -35,6 +36,7 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/add-projects" element={<AddProject />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/profile2" element={<Profile2 />} />
               <Route path="/registration" element={<Register />} />
               <Route path="/login" element={<Login />} />
               <Route path="/my-projects" element={<MyProjects />} />

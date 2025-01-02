@@ -90,14 +90,11 @@ const Profile = () => {
   }, []);
 
   useEffect(() => {
-    if (user) {
-      if (user.role === "user") {
-        hj('event', 'viewed_profile_A');
-      } else if (user.role === "userB") {
-        hj('event', 'viewed_profile_B');
-      }
+    if (user && window.hj) {
+      window.hj('event', 'viewed_profile_A'); // Send event to Hotjar
     }
-  }, [user]); // Trigger when 'user' state changes
+  }, [user]);
+  // Trigger when 'user' state changes
 
 
   const handleUpdateUser = async (formData) => {

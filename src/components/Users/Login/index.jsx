@@ -39,13 +39,13 @@ const Login = () => {
         sessionStorage.setItem("refreshToken", data.refreshToken);
         sessionStorage.setItem("expiresAt", data.expiresAt);
 
-        // Navigate based on userRole
-        if (data.userRole === "user") {
+        const userRole = data.user.role; // Access the role from data.user
+        if (userRole === "user") {
           navigate("/profile");
-        } else if (data.userRole === "userB") {
+        } else if (userRole === "userB") {
           navigate("/profile2");
         } else {
-          alert("Invalid user role");
+          alert("Invalid user role: " + userRole);
         }
       } else {
         const data = await response.json();

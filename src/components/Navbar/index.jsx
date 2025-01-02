@@ -94,7 +94,7 @@ const Navbar = () => {
             <Link to="/profile">Profile</Link>
             <div className="dropdown-content">
               <Link to="/profile">My Profile</Link>
-              {userRole !== "company" && (
+              {userRole !== "company" && userEmail === "usertest@gmail.com"(
                 <>
                   <Link to="/my-projects">My Projects</Link>
                   <Link to="/add-projects">Post a Project</Link>
@@ -106,11 +106,7 @@ const Navbar = () => {
                   <Link to="/post-job">Post a Job</Link>
                 </>
               )}
-              {userEmail === "usertest@gmail.com" && (
-                <>
-                  <Link to="/my-projects2">My Projects2</Link>
-                </>
-              )}
+
 
             </div>
           </li>
